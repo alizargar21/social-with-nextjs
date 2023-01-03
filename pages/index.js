@@ -1,14 +1,14 @@
-
+import PostItem from "../components/posts/PostItem"
+import Layout from "../components/layout/Layout";
+import PostContainer from "../components/posts/PostContiner";
 function HomePage(props) {
-
-
-  return (
-    <div className="bg-sky-500">
-      <h2 className="text-red-500">HomePage</h2>
-  <p> hi</p>
-    </div>
-  );
+  return (<Layout>
+       <PostContainer>
+        <PostItem></PostItem>
+        <PostItem></PostItem>
+        <PostItem></PostItem>
+       </PostContainer>
+  </Layout>);
 }
-
 
 export default HomePage;
