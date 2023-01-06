@@ -1,10 +1,25 @@
+import Link from "next/link";
 const NavLink = () => {
   return (
-    <ul className="text-white center w-full  ">
-      <li className="md:text-md  mx-9 md:mx-6  sm:mx-4 font-arial  italic">Home</li>
-      <li className="md:text-md  mx-9 md:mx-6  sm:mx-4 font-arial  italic">Explore</li>
-      <li className="md:text-md  mx-9 md:mx-6  sm:mx-4 font-arial  italic">My Posts</li>
-      <li className="md:text-md  mx-9 md:mx-6  sm:mx-4 font-arial  italic">About</li>
+    <ul className="center w-full text-white  ">
+      <Link href={"/"}>
+        <li className="md:text-md  font-arial mx-9  italic md:mx-6  sm:mx-4">
+          Home
+        </li>
+      </Link>
+      <Link href={"/auth"}>
+        <li className="md:text-md  font-arial mx-9  italic md:mx-6  sm:mx-4">
+          Sign Up
+        </li>
+      </Link>
+      <li className="md:text-md  font-arial mx-9  italic md:mx-6  sm:mx-4">
+        My Posts
+      </li>
+      <Link href={"/users"}>
+        <li className="md:text-md  font-arial mx-9  italic md:mx-6  sm:mx-4">
+          Users
+        </li>
+      </Link>
     </ul>
   );
 };
